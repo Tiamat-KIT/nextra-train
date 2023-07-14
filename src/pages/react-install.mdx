@@ -1,0 +1,27 @@
+# Reactの導入
+## Reactの導入
+早速、Reactを導入していきます。
+そのために、先ほど導入したNode.jsに同梱されている
+npmというパッケージマネージャを利用してReactを導入していく
+
+
+```bash
+npm install react react-dom
+```
+
+これでReactの導入が完了しました。
+ここから、コーディングをしていきましょう
+
+```jsx
+import {createRoot} from 'react-dom/client'
+
+document.body.innerHTML = '<div id='app'></div>'
+const root = createRoot(document.getElementById('app'))
+root.render(<h1>Hello,World</h1>)
+```
+
+これを実行すると
+
+<div id="app">
+   <h1 className="text-xl">Hello,World</h1>
+</div>
