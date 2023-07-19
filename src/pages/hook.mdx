@@ -1,0 +1,24 @@
+
+import {useState} from "react"
+
+# Hookについて
+Hook(フック)というのは、Reactにおいて、**状態**を扱うために用いられる関数です。
+例えば、ボタンがクリックされた回数を記録しながら表示したいときは
+`useState`というフック関数を使います。
+
+```ts 
+import {useState} from "react"
+function Button(){
+    const [count,setCount] = useState<number>(0)
+    const clickEvent = () => {setCount(count += 1)}
+    return (<button onClick={clickEvent}>Click</button>)
+}
+```
+
+そうすると、以下のような機能が実現できます。
+
+---
+const [count,setCount] = useState(0)
+
+<button onClick={setCount(count += 1)}>Click</button>
+---
